@@ -57,8 +57,8 @@ const Input = ({
       {errorMessage && (
         <Text
           margin="2px 0 0 0"
-          type={textTypes.PARAGRAPH_SMALL_SEMI_BOLD}
-          color={theme.colors.neutralTheme.white}>
+          type={textTypes.PARAGRAPH_SEMI_BOLD}
+          color={theme.colors.orangeTheme.orange}>
           {errorMessage}
         </Text>
       )}

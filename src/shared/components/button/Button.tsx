@@ -34,7 +34,7 @@ const Button = ({
 
   const renderText = (color: string) => (
     <>
-      <Text type={textTypes.BUTTON_SEMI_BOLD} color={color}>
+      <Text type={textTypes.BUTTON_BOLD} color={color}>
         {title}
       </Text>
       {loading && (
@@ -43,18 +43,19 @@ const Button = ({
     </>
   );
 
-  if (disabled) {
+  if (loading) {
     return (
       <ButtonDisabled {...props} margin={margin}>
         {renderText(theme.colors.mainTheme.primary)}
       </ButtonDisabled>
     );
+  } else {
+    return (
+      <ButtonContainer {...props} margin={margin} onPress={handleOnPress}>
+        {renderText(theme.colors.mainTheme.primary)}
+      </ButtonContainer>
+    );
   }
-  return (
-    <ButtonContainer {...props} margin={margin} onPress={handleOnPress}>
-      {renderText(theme.colors.mainTheme.primary)}
-    </ButtonContainer>
-  );
 };
 
 export default Button;

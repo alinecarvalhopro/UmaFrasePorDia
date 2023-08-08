@@ -1,9 +1,10 @@
-import {SafeAreaView, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import Login from './modules/login/screens/Login';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>Uma frase por dia</Text>
+      <Login/>
     </SafeAreaView>
   );
 };

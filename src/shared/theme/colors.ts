@@ -23,5 +23,5 @@ export const pinkTheme = {
 };
 
 export const orangeTheme = {
-  orange80: '#E7774D',
+  orange: '#E7774D',
 }
