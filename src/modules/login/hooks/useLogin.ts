@@ -1,34 +1,26 @@
 import {useState} from 'react';
 import {NativeSyntheticEvent, TextInputChangeEventData} from 'react-native';
-import { api } from '../../../services/api';
+import {api} from '../../../services/api';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../../store';
+import {setUserAction} from '../../../store/reducers/userReducer';
 
-interface IUser {
-  id: number;
-  name: string;
-  email: string;
-  password: string
-}
-interface IUserResult {
-  accessToken: 'string';
-  user: IUser
-
-}
 export const useLogin = () => {
+  const user = useSelector((state: RootState) => state.userReducer.user);
+  const dispatch = useDispatch();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [user, setUser] = useState<IUserResult | unknown>();
 
   const handleOnPress = async () => {
     setLoading(true);
     try {
       const {data} = await api.post('/login', {
-          email,
-          password,
-        },
-      );
-      setUser(data.user);
+        email,
+        password,
+      });
+      dispatch(setUserAction(data));
     } catch (error) {
       setErrorMessage('Usuário ou senha inválidos');
     } finally {
