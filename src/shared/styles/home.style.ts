@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 import {theme} from '../theme/theme';
 
-export const ContainerLogin = styled.SafeAreaView`
+export const ContainerHome = styled.SafeAreaView`
   width: 100%;
   height: 100%;
 
@@ -11,11 +11,4 @@ export const ContainerLogin = styled.SafeAreaView`
 
   justify-content: center;
   align-items: center;
-`;
-
-export const ImageLogo = styled.Image`
-  width: 250px;
-  height: 180px;
-
-  margin-bottom: 20px;
 `;

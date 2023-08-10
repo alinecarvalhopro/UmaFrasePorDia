@@ -6,7 +6,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../store';
 import {useState} from 'react';
-import {api} from '../../services/api';
+import {apiUser} from '../../services/api';
 import {setUserAction} from '../../store/reducers/userReducer';
 import {ContainerLogin, ImageLogo} from '../../shared/styles/login.style';
 import Input from '../../shared/components/input/Input';
@@ -33,7 +33,7 @@ const Login = ({navigation}: ILoginScreenProps) => {
   
     setLoading(true);
     try {
-      const {data} = await api.post('/login', {
+      const {data} = await apiUser.post('/login', {
         email,
         password,
       });
