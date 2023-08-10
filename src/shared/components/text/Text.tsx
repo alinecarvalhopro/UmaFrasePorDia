@@ -7,9 +7,10 @@ interface TextProps extends TextPropsNative {
   color?: string;
   type?: string;
   margin?: string;
+  textAlign?: string;
 }
 
-const Text = ({color, type, margin, ...props}: TextProps) => {
+const Text = ({color, type, margin, textAlign, ...props}: TextProps) => {
   const fontSize = useMemo(() => {
     switch (type) {
       case textTypes.TITLE_BOLD:
@@ -73,10 +74,11 @@ const Text = ({color, type, margin, ...props}: TextProps) => {
 
   return (
     <ContainerText
-      fontFamily={fontFamily}
-      fontSize={fontSize}
-      color={color}
-      custonMargin={margin}
+    fontFamily={fontFamily}
+    fontSize={fontSize}
+    color={color}
+    custonMargin={margin}
+    customTextAlign={textAlign}
       {...props}
     />
   );

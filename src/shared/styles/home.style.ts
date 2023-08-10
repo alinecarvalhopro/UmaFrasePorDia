@@ -12,3 +12,10 @@ export const ContainerHome = styled.SafeAreaView`
   justify-content: center;
   align-items: center;
 `;
+
+export const ImageMessage = styled.Image`
+  width: 200px;
+  height: 200px;
+
+  margin-bottom: 20px;
+`;
