@@ -18,9 +18,13 @@ const Register = ({navigation}: IRegisterScreenProps) => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleOnPress = async () => {
+    if (name == '' || email== '' || password == '') {
+      setErrorMessage('Campo obrigatório')
+    }
     setLoading(true);
     try {
       await apiUser.post('/users', {
@@ -40,18 +44,21 @@ const Register = ({navigation}: IRegisterScreenProps) => {
     event: NativeSyntheticEvent<TextInputChangeEventData>,
   ) => {
     setName(event.nativeEvent.text);
+    setErrorMessage('')
   };
 
   const handleEmail = (
     event: NativeSyntheticEvent<TextInputChangeEventData>,
   ) => {
     setEmail(event.nativeEvent.text);
+    setErrorMessage('')
   };
 
   const handlePassword = (
     event: NativeSyntheticEvent<TextInputChangeEventData>,
   ) => {
     setPassword(event.nativeEvent.text);
+    setErrorMessage('')
   };
 
   return (
@@ -63,6 +70,7 @@ const Register = ({navigation}: IRegisterScreenProps) => {
         placeholder="Digite seu nome"
         title="Nome"
         onChange={handleName}
+        errorMessage={errorMessage}
       />
       <Input
         value={email}
@@ -70,6 +78,7 @@ const Register = ({navigation}: IRegisterScreenProps) => {
         placeholder="Digite seu e-email"
         title="E-mail"
         onChange={handleEmail}
+        errorMessage={errorMessage}
       />
       <Input
         value={password}
@@ -77,6 +86,7 @@ const Register = ({navigation}: IRegisterScreenProps) => {
         placeholder="Digite sua senha"
         title="Senha"
         onChange={handlePassword}
+        errorMessage={errorMessage}
       />
       <Button
         type={theme.buttons.buttonsTheme.primary}
