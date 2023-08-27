@@ -22,9 +22,10 @@ Tecnologias utilizadas:
 ### Segue o link do vídeo que postei no meu LinkedIn, onde apresento com mais detalhes as funcionalidades:
 - https://www.linkedin.com/feed/update/urn:li:activity:7096868329662930944/
 
-![uma-frase-por-dia](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/eab7f7dd-2dbf-4608-a54a-c96087b9c983)
-![cadastro](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/ca79e7c2-994a-4c56-924c-7acd907ebcdf)
-![home](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/5856ad52-68ff-4d9d-80da-e0089ced17fc)
+![1](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/dfd3dc41-eca0-4ca7-9d0f-29fb430281f8)
+![2](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/e56889fa-a089-4e69-9705-7638e9069bb8)
+![3](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/602ef95c-4f99-4280-b689-1c2c88177db8)
+
 
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
