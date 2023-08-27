@@ -1,3 +1,32 @@
+## Uma Frase por Dia🌷
+
+Este é um projeto pessoal muito especial. Uma aplicação mobile que oferece uma dose diária de motivação. Ao abrir o app, o usuário recebe mensagem motivacional e, se desejar, pode também sortear uma nova mensagem.
+
+A proposta e o estilo do aplicativo refletem um pouco sobre mim. Acredito na importância da positividade no nosso dia a dia, e esse aplicativo é uma extensão disso.
+
+Para o Design, optei por um estilo minimalista que valoriza a simplicidade e foca na mensagem.
+
+Tecnologias utilizadas:
+
+- A aplicação foi desenvolvida em React Native e TypeScript.
+
+- Implementei o Redux para o gerenciamento de estado do usuário logado.
+
+- O React Navigation para navegação entre telas.
+
+- Apliquei Styled Components para a estilização, aproveitando a componentização de elementos para maximizar a flexibilidade do design.
+*Gostaria de destacar esse ponto, pois já utilizei Styled Components em muitos projetos, porém, foi a primeira vez que utilizei passando os estilos dos componentes com props.
+
+- Para requisições, integrei o Axios. <br/>
+
+### Segue o link do vídeo que postei no meu LinkedIn, onde apresento com mais detalhes as funcionalidades:
+- https://www.linkedin.com/feed/update/urn:li:activity:7096868329662930944/
+
+![uma-frase-por-dia](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/eab7f7dd-2dbf-4608-a54a-c96087b9c983)
+![cadastro](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/ca79e7c2-994a-4c56-924c-7acd907ebcdf)
+![home](https://github.com/alinecarvalhopro/UmaFrasePorDia/assets/118927052/5856ad52-68ff-4d9d-80da-e0089ced17fc)
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
